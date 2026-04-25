@@ -160,14 +160,14 @@ const ColorPrintingPage = () => {
               <div className="bg-white border border-charcoal/10 text-charcoal p-8">
                 <div className="flex justify-center mb-4">
                   <img
-                    src="/images/KONICA.webp"
+                    src="./images/KONICA.webp"
                     alt="Konica Minolta"
                     className="h-32 object-contain opacity-95"
                   />
                 </div>
                 <div className="bg-white rounded-lg overflow-hidden p-2 mb-6">
                   <img
-                    src="/images/color-printing.webp"
+                    src="./images/color-printing.webp"
                     alt="Konica Minolta AccurioPress C4080"
                     className="w-full h-auto object-contain rounded"
                   />

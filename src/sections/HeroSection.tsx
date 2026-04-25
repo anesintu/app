@@ -61,7 +61,7 @@ const HeroSection = () => {
             {/* Logo */}
             <div className="flex justify-center">
               <img
-                src="/images/KONICA.webp"
+                src="./images/KONICA.webp"
                 alt="Konica Minolta"
                 className="h-28 md:h-32 object-contain opacity-90"
               />
@@ -70,7 +70,7 @@ const HeroSection = () => {
             {/* BW Machine */}
             <div className="tech-frame bg-white/40 p-5 md:p-6 flex flex-col items-center">
               <img
-                src="/images/bw-printing.webp"
+                src="./images/bw-printing.webp"
                 alt="Konica Minolta AccurioPrint 2100"
                 className="w-full h-auto max-h-[200px] object-contain"
               />
@@ -82,7 +82,7 @@ const HeroSection = () => {
             {/* Color Machine */}
             <div className="tech-frame bg-white/40 p-5 md:p-6 flex flex-col items-center">
               <img
-                src="/images/color-printing.webp"
+                src="./images/color-printing.webp"
                 alt="Konica Minolta AccurioPress C4080"
                 className="w-full h-auto max-h-[200px] object-contain"
               />

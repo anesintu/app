@@ -166,7 +166,7 @@ const ContactsPage = () => {
               {/* Office Photo */}
               <div className="mt-8">
                 <img
-                  src="/images/OPOLIG.webp"
+                  src="./images/OPOLIG.webp"
                   alt="Офис типографии ЛитАРы"
                   className="w-full h-auto rounded-lg object-cover"
                 />
@@ -183,7 +183,7 @@ const ContactsPage = () => {
                     className="qr-item group"
                   >
                     <img
-                      src="/images/YANDEX.webp"
+                      src="./images/YANDEX.webp"
                       alt="QR Яндекс.Карты"
                       className="w-[100px] h-[100px] object-contain rounded-lg bg-white p-1 shadow-sm group-hover:shadow-md transition-shadow"
                     />
@@ -196,7 +196,7 @@ const ContactsPage = () => {
                     className="qr-item group"
                   >
                     <img
-                      src="/images/GOOGLEMAPS.webp"
+                      src="./images/GOOGLEMAPS.webp"
                       alt="QR Google Maps"
                       className="w-[100px] h-[100px] object-contain rounded-lg bg-white p-1 shadow-sm group-hover:shadow-md transition-shadow"
                     />
