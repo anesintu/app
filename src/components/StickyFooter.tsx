@@ -1,12 +1,15 @@
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const StickyFooter = () => {
+  const navigate = useNavigate();
+
   const scrollToContacts = () => {
     const contactsSection = document.getElementById('contacts');
     if (contactsSection) {
       contactsSection.scrollIntoView({ behavior: 'smooth' });
     } else {
-      window.location.href = '/contacts';
+      navigate('/contacts');
     }
   };
 
