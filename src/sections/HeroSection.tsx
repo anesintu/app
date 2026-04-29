@@ -22,7 +22,7 @@ const HeroSection = () => {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-charcoal-85 max-w-2xl leading-relaxed">
-              Полный комплекс полиграфических услуг — от разработки макета до готового изделия. Печать тиражей сегодня на сегодня.
+              Полный комплекс полиграфических услуг — от разработки макета до готового полиграфического изделия любой сложности. Печать тиражей «сегодня на сегодня».
             </p>
 
             {/* USP Items */}
@@ -67,18 +67,6 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* BW Machine */}
-            <div className="tech-frame bg-white/40 p-5 md:p-6 flex flex-col items-center">
-              <img
-                src="./images/bw-printing.webp"
-                alt="Konica Minolta AccurioPrint 2100"
-                className="w-full h-auto max-h-[200px] object-contain"
-              />
-              <span className="mt-4 text-xs font-mono text-charcoal/70 text-center tracking-wider uppercase">
-                AccurioPrint 2100
-              </span>
-            </div>
-
             {/* Color Machine */}
             <div className="tech-frame bg-white/40 p-5 md:p-6 flex flex-col items-center">
               <img
@@ -88,6 +76,18 @@ const HeroSection = () => {
               />
               <span className="mt-4 text-xs font-mono text-charcoal/70 text-center tracking-wider uppercase">
                 AccurioPress C4080
+              </span>
+            </div>
+
+            {/* BW Machine */}
+            <div className="tech-frame bg-white/40 p-5 md:p-6 flex flex-col items-center">
+              <img
+                src="./images/bw-printing.webp"
+                alt="Konica Minolta AccurioPrint 2100"
+                className="w-full h-auto max-h-[200px] object-contain"
+              />
+              <span className="mt-4 text-xs font-mono text-charcoal/70 text-center tracking-wider uppercase">
+                AccurioPrint 2100
               </span>
             </div>
           </div>
