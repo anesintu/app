@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Instagram, Send } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,6 +36,20 @@ const Footer = () => {
                 className="w-10 h-10 flex items-center justify-center border border-eggshell/30 text-eggshell/70 hover:border-gold hover:text-gold hover:bg-gold/10 transition-all"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://t.me/+375333063068"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center border border-eggshell/30 text-eggshell/70 hover:border-gold hover:text-gold hover:bg-gold/10 transition-all"
+              >
+                <Send className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:info@usp.by"
+                className="w-10 h-10 flex items-center justify-center border border-eggshell/30 text-eggshell/70 hover:border-gold hover:text-gold hover:bg-gold/10 transition-all"
+              >
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>

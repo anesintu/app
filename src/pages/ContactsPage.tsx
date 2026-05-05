@@ -215,7 +215,7 @@ const ContactsPage = () => {
               <p>УНП: 591031265</p>
               <p>Адрес: РБ, 230025, г. Гродно, ул. Карла Маркса, 11, к. 11/2</p>
               <p className="account-number">
-                Р/с: BY90<span className="highlight-b">B</span>ALFA30122B54130010270000
+                Р/с: BY90ALFA30122B54130010270000
               </p>
               <p>ЗАО "Альфа-Банк", БИК: ALFABY2X</p>
               <p className="payment-methods">Формы расчета: безналичный, ЕРИП, терминал (карта/наличные)</p>
