@@ -48,6 +48,10 @@ const HeroSection = () => {
               </Link>
               <a
                 href="#services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="group flex items-center gap-2 text-charcoal font-medium hover:text-gold transition-colors"
               >
                 Посмотреть услуги
