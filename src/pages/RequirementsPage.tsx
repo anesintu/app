@@ -9,18 +9,26 @@ const RequirementsPage = () => {
 
   const fileFormats = [
     { name: 'PDF', recommended: true },
+    { name: 'JPEG', recommended: false },
     { name: 'EPS', recommended: false },
     { name: 'TIFF', recommended: false },
     { name: 'CDR', recommended: false },
     { name: 'PSD', recommended: false },
   ];
 
-  const techRequirements = [
-    { title: 'Цветовая модель', value: 'CMYK (не RGB, не Pantone)' },
-    { title: 'Разрешение', value: 'Не менее 300 dpi' },
-    { title: 'Текст', value: 'В кривых или с приложением шрифтов' },
-    { title: 'Вылеты', value: 'Минимум 2 мм со всех сторон' },
-    { title: 'Безопасная зона', value: 'Минимум 3 мм от края' },
+  const generalNotes = [
+    'Желательно предоставить макет в CMYK-модели. RGB и другие модели цвета приведут к искажению оттенков при печати',
+    'Размер в макете должен соответствовать печатному оттиску (1:1) + выпуск за обрез по 3 мм с каждой стороны. Например, если это формат А4 (210×297 мм), то размер файла до обреза должен быть 216×303 мм',
+    'Помните о безопасной зоне — не располагайте важный текст или логотипы ближе 3–4 мм от края реза / биговки',
+    'Каждое изделие должно быть в отдельном файле',
+    'Разрешение графических объектов не менее 300 dpi',
+    'Многополосные изделия (книги, брошюры, буклеты и проч.) вне зависимости от сборки предоставляются постранично в формате PDF. Не принимаются макеты в развороте или спуском полос',
+    'Все используемые в оригинал-макете шрифты должны быть конвертированы в кривые, либо все используемые шрифты должны быть предоставлены вместе с оригинал-макетом',
+    'Не рекомендуется использовать рамку по периметру макета или линии, параллельные сторонам макета, находящиеся близко к краю. В случае использования таковых — не гарантируем, что эта рамка или её отступы от краев изделия будут равномерными',
+    'Не рекомендуется использовать большое поле сплошной заливки, т.к. она может получиться неоднородной. Если они необходимы, накладывайте поверх легкую текстуру или полупрозрачное изображение',
+    'В случае сборки на пружину, отступ значимых элементов макета от края должен быть не менее 7 мм',
+    'Типография не гарантирует 100% совпадения цветовых оттенков экранного изображения оригинал-макета и печатного оттиска из-за разницы охватов моделей цветопередачи, используемых монитором (RGB) и в печатном процессе (CMYK)',
+    'Макеты, передаваемые в Word, Excel и других программах не являются готовыми макетами и требуют дополнительной обработки и согласования',
   ];
 
   return (
@@ -44,110 +52,19 @@ const RequirementsPage = () => {
             ))}
           </nav>
 
-          <div className="max-w-3xl">
-            <h1 className="text-eggshell mb-6">Требования к макетам</h1>
-            <p className="text-eggshell/70 text-lg md:text-xl leading-relaxed">
-              Правильно подготовленный макет — залог качественной печати.
-              Следуйте нашим рекомендациям для получения лучшего результата.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Paper Sizes Visualization */}
-      <section className="section-padding bg-eggshell">
-        <div className="container-custom">
-          <h2 className="text-charcoal mb-8">Размеры используемой бумаги (ISO 216)</h2>
-
-          <div className="w-full max-w-xl mx-auto" style={{ aspectRatio: '420 / 580' }}>
-            <div className="grid w-full h-full" style={{
-              gridTemplateColumns: 'repeat(12, 1fr)',
-              gridTemplateRows: 'repeat(12, 1fr)'
-            }}>
-              {/* A3 */}
-              <div className="bg-[#1e3a8a] text-white p-2 md:p-4 flex flex-col justify-start" style={{ gridColumn: '1 / 13', gridRow: '1 / 6' }}>
-                <span className="text-2xl md:text-4xl font-bold leading-tight">A3</span>
-                <span className="text-sm md:text-lg mt-1">297×420 мм</span>
-              </div>
-
-              {/* A4 */}
-              <div className="bg-[#fbbf24] text-charcoal p-2 md:p-3 flex flex-col justify-start" style={{ gridColumn: '1 / 7', gridRow: '6 / 13' }}>
-                <span className="text-xl md:text-3xl font-bold leading-tight">A4</span>
-                <span className="text-xs md:text-base mt-1">210×297 мм</span>
-              </div>
-
-              {/* A5 */}
-              <div className="bg-[#dc2626] text-charcoal p-2 md:p-3 flex flex-col justify-start" style={{ gridColumn: '7 / 13', gridRow: '6 / 9' }}>
-                <span className="text-lg md:text-2xl font-bold leading-tight">A5</span>
-                <span className="text-xs md:text-sm mt-1">148×210 мм</span>
-              </div>
-
-              {/* A6 */}
-              <div className="bg-[#16a34a] text-white p-1 md:p-2 flex flex-col justify-start" style={{ gridColumn: '7 / 10', gridRow: '9 / 13' }}>
-                <span className="text-base md:text-xl font-bold leading-tight">A6</span>
-                <span className="text-[10px] md:text-xs mt-1">105×148 мм</span>
-              </div>
-
-              {/* A7 */}
-              <div className="bg-black text-white p-1 md:p-2 flex flex-col justify-start" style={{ gridColumn: '10 / 13', gridRow: '9 / 11' }}>
-                <span className="text-sm md:text-lg font-bold leading-tight">A7</span>
-                <span className="text-[10px] md:text-xs mt-0.5">74×105 мм</span>
-              </div>
-
-              {/* A8 */}
-              <div className="bg-[#0891b2] text-white p-1 md:p-2 flex flex-col justify-start" style={{ gridColumn: '10 / 13', gridRow: '11 / 13' }}>
-                <span className="text-sm md:text-base font-bold leading-tight">A8</span>
-                <span className="text-[10px] md:text-xs mt-0.5">52×74 мм</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bleed/Trim Diagram */}
-      <section className="section-padding bg-charcoal">
-        <div className="container-custom">
-          <h2 className="text-eggshell mb-8">Технические требования к макету</h2>
-          
-          <div className="bleed-diagram-container">
-            <div className="bleed-zone">
-              <div className="bleed-label">Вылет (мин. 2 мм)</div>
-              <div className="trim-zone">
-                <div className="trim-label">Обрезной формат</div>
-                <div className="safe-zone">
-                  <div className="safe-label">Текст и значимые элементы</div>
-                  <div className="safe-content">
-                    <div className="mock-text-line short"></div>
-                    <div className="mock-text-line"></div>
-                    <div className="mock-text-line"></div>
-                    <div className="mock-text-line medium"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Technical Requirements Cards */}
-          <div className="tech-requirements-grid">
-            {techRequirements.map((req, index) => (
-              <div key={index} className="tech-req-card">
-                <h4>{req.title}</h4>
-                <p>{req.value}</p>
-              </div>
-            ))}
-          </div>
+          <h1 className="text-eggshell">Требования к макетам</h1>
         </div>
       </section>
 
       {/* File Formats */}
       <section className="section-padding bg-eggshell">
         <div className="container-custom">
-          <h2 className="text-charcoal mb-8">Форматы файлов</h2>
-          
+          <h2 className="text-charcoal mb-8">Макеты принимаются в форматах:</h2>
+
           <div className="file-formats-grid">
             {fileFormats.map((format, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`file-format-card ${format.recommended ? 'recommended' : ''}`}
               >
                 <span className="format-name">{format.name}</span>
@@ -157,16 +74,25 @@ const RequirementsPage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Important Notes */}
-          <div className="important-notes">
-            <h3 className="text-charcoal mb-4">Важные замечания</h3>
-            <ul className="notes-list">
-              <li>Все шрифты должны быть переведены в кривые или приложены к макету</li>
-              <li>Растровые изображения должны иметь разрешение не менее 300 dpi при реальном размере</li>
-              <li>Вылеты должны быть одинаковыми со всех сторон макета</li>
-              <li>Важные элементы (текст, логотипы) должны находиться в безопасной зоне</li>
-              <li>Для многостраничной продукции страницы должны быть расположены в правильном порядке</li>
+      {/* General Notes */}
+      <section className="section-padding bg-charcoal">
+        <div className="container-custom">
+          <h2 className="text-eggshell mb-8">Общие пожелания к макетам</h2>
+
+          <div className="max-w-4xl">
+            <ul className="space-y-0">
+              {generalNotes.map((note, index) => (
+                <li
+                  key={index}
+                  className="py-4 pl-8 relative border-b border-eggshell/10 text-eggshell/80 text-sm md:text-base leading-relaxed"
+                >
+                  <span className="absolute left-0 top-4 text-gold font-bold">✓</span>
+                  {note}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
