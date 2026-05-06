@@ -190,7 +190,7 @@ const ContactsPage = () => {
                     <span className="group-hover:text-gold transition-colors">Яндекс.Карты</span>
                   </a>
                   <a
-                    href="https://maps.app.goo.gl/BibBRddsvd2myQ2p8"
+                    href="https://maps.app.goo.gl/ZonEVggyDbyaJA3v7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="qr-item group"
